@@ -2,17 +2,60 @@
 <html>
 <head>
 <title>alpha-blog</title>
+<style>
+ul {
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    
+}
+
+div#nav{
+  text-align: center;
+  margin: 30px;
+}
+div#nav ul{
+  display: inline-block;
+}
+
+li {
+    float: left;
+    display: inline-block;
+    font-weight: bold;
+   
+}
+
+li a {
+    display: block;
+    padding: 8px;
+    background-color: fff;
+    text-decoration:none;
+}
+li a:visited {
+    color:black;
+}
+li a:hover:not(.active) {
+    background-color: #107A14;
+    color: black;
+
+</style>
 </head>
 <body>
 
-<h1 style="text-align:center; font-weight: bold; background-color:#107A14; font-size: 60px; top:0">Alpha-Blog</h1>
+<h1 style="text-align:center; font-weight: bold; background-color:#107A14; font-size: 60px; top:0">Alpha Blog</h1>
+
+<div id="nav">
+  <ul>
+     <li><a class="active" href="#">Home</a></li>
+    <li><%= link_to "Alpha Blog", articles_path %></li>
+    <li><%= link_to 'About', about_path %></li>
+  </ul>
+</div>
 
 <center><img src="https://www.udemy.com/staticx/udemy/images/v5/logo-green.svg"/></center>
 
-<ul style="list-style:none; font-size:40px; text-align: left">
-     <li><a href="#"> Home</a></li>
-    <li style="text-decoration: none"><%= link_to "Alpha Blog", articles_path %> | <%= link_to 'About', about_path %></li>
-</ul>
+
 
 <container style="text-align: center; margin: 0 auto; padding:30px 30px; ">
 
@@ -28,8 +71,8 @@ quam nulla tincidunt tortor</p>
 
 </container>
 
-<footer style="height: 50px; background-color:#107A14 ">
-    <center><h3>Alpha-Blog</h3></center>
+<footer style="height: 50px; background-color:#107A14; margin: 0; ">
+    <center><h3>Alpha Blog</h3></center>
 </footer>
 
 </body>
